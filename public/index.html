@@ -1195,7 +1195,7 @@ async function loadClientesForSelect(){
   try{const r=await af('/clientes');const cls=await r.json();window._clientes=cls;
     const sel=document.getElementById('n-cliente');
     const opt0=sel.options[0];sel.innerHTML='';sel.appendChild(opt0);
-    cls.forEach(c=>{const o=document.createElement('option');o.value=c.id;o.textContent=c.nome+(c.empresa?` (${c.empresa})`:'')+;sel.appendChild(o)});
+    cls.forEach(c=>{const o=document.createElement('option');o.value=c.id;o.textContent=c.nome+(c.empresa?` (${c.empresa})`:'');sel.appendChild(o)});
   }catch{}
 }
 
