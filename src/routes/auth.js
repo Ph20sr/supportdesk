@@ -31,4 +31,19 @@ router.get('/me', auth, (req, res) => {
   res.json({ id: req.usuario.id, nome: req.usuario.nome, email: req.usuario.email, perfil: req.usuario.perfil });
 });
 
+router.get('/setup', async (req, res) => {
+  try {
+    const bcrypt = require('bcryptjs');
+    const { v4: uuidv4 } = require('uuid');
+    await db.execute({ sql: 'DELETE FROM usuarios WHERE email=?', args: ['admin@suporte.com'] });
+    await db.execute({ sql: 'DELETE FROM sessoes', args: [] });
+    const hash = await bcrypt.hash('admin123', 10);
+    await db.execute({
+      sql: "INSERT INTO usuarios (id, nome, email, senha_hash, perfil, ativo) VALUES (?, ?, ?, ?, ?, ?)",
+      args: [uuidv4(), 'Administrador', 'admin@suporte.com', hash, 'admin', 1]
+    });
+    res.json({ ok: true, mensagem: 'Admin recriado! Use: admin@suporte.com / admin123' });
+  } catch (e) { res.status(500).json({ erro: e.message }); }
+});
+
 module.exports = router;
