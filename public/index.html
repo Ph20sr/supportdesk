@@ -2,7 +2,7 @@
 <html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SupportDesk Pro</title>
+<title>EL_Ticket</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet">
@@ -323,22 +323,29 @@ a{color:var(--ac);text-decoration:none}
   <div class="login-l">
     <div class="login-l-brand">
       <div class="login-l-icon"><i class="ti ti-ticket"></i></div>
-      <span class="login-l-name">SupportDesk Pro</span>
+      <span class="login-l-name">EL_Ticket</span>
     </div>
     <div class="login-l-foot">
-      <h1>Suporte <em>inteligente,</em><br>clientes satisfeitos.</h1>
-      <p>Gerencie chamados, SLAs e equipes com clareza e eficiência empresarial.</p>
+      <h1>Chamados <em>resolvidos,</em><br>equipe alinhada.</h1>
+      <p>Gerencie suporte técnico com SLA automático, histórico completo e notificações em tempo real.</p>
     </div>
     <div class="login-l-stats">
-      <div class="login-l-stat"><div class="login-l-stat-v">SLA</div><div class="login-l-stat-l">Monitorado</div></div>
+      <div class="login-l-stat"><div class="login-l-stat-v">SLA</div><div class="login-l-stat-l">Automático</div></div>
       <div class="login-l-stat"><div class="login-l-stat-v">E-mail</div><div class="login-l-stat-l">Integrado</div></div>
-      <div class="login-l-stat"><div class="login-l-stat-v">Team</div><div class="login-l-stat-l">Multi-agente</div></div>
+      <div class="login-l-stat"><div class="login-l-stat-v">Time</div><div class="login-l-stat-l">Multi-agente</div></div>
     </div>
   </div>
   <div class="login-r">
     <div class="login-form">
-      <div class="login-title">Bem-vindo de volta</div>
-      <div class="login-sub">Acesse com suas credenciais corporativas</div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:32px">
+        <div style="width:42px;height:42px;background:var(--ac);border-radius:11px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px"><i class="ti ti-ticket"></i></div>
+        <div>
+          <div style="font-family:var(--fm);font-size:18px;font-weight:500;letter-spacing:-.01em;color:var(--tx)">EL_Ticket</div>
+          <div style="font-size:11px;color:var(--tx3)">Sistema de suporte</div>
+        </div>
+      </div>
+      <div class="login-title">Entrar na conta</div>
+      <div class="login-sub">Use suas credenciais de acesso</div>
       <div id="lerr" class="alrt alrt-e hidden" style="margin-bottom:16px">
         <i class="ti ti-alert-circle"></i><span id="lerr-msg"></span>
       </div>
@@ -351,7 +358,7 @@ a{color:var(--ac);text-decoration:none}
         <input class="fi" id="l-pw" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
       </div>
       <button class="btn btn-p" style="width:100%" id="lbtn" onclick="doLogin()">
-        <i class="ti ti-arrow-right"></i> Entrar no sistema
+        <i class="ti ti-arrow-right"></i> Entrar
       </button>
     </div>
   </div>
@@ -362,7 +369,7 @@ a{color:var(--ac);text-decoration:none}
   <header class="topbar">
     <div class="t-brand">
       <div class="t-icon"><i class="ti ti-ticket"></i></div>
-      <span class="t-name">SupportDesk <span style="font-family:var(--f);font-size:11px;background:var(--ac);color:#fff;padding:2px 6px;border-radius:4px;vertical-align:middle;font-weight:600">PRO</span></span>
+      <span class="t-name" style="font-family:var(--fm);font-weight:500">EL_Ticket</span>
     </div>
     <div class="t-sep"></div>
     <nav class="t-nav">
